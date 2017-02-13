@@ -5,7 +5,12 @@ the "Software quality and testing" course.
 
 ### Course 1. ###
 * Sample project [uCoach](https://github.com/ucoach)
+* Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Set-up environment
+ * Right-click on build.xml -> "Add as Ant Build File"
+ * Ant Build window -> "install" 
+ * Right-click on src -> "Mark it as sources root"
+ * Add libs and tools
 
 
 ### Course 2-3. ###
