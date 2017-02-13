@@ -8,6 +8,10 @@ the "Software quality and testing" course.
 
 ### Course 2-3. ###
 
+* [Groovy](https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.8.zip)
+* [Spock if(gradle.works)](https://github.com/spockframework/spock.git)
+* [Spock else](https://search.maven.org/remotecontent?filepath=io/sniffy/spock/3.1.0-RC10/spock-3.1.0-RC10.jar)
+* [TestNG](Default support from IDEA)
 
 ### Course 4. ###
  
