@@ -4,6 +4,8 @@ Download the tools to run the examples for the Unit testing part of
 the "Software quality and testing" course.
 
 ### Course 1. ###
+* Sample project [uCoach](https://github.com/ucoach)
+* Set-up environment
 
 
 ### Course 2-3. ###
