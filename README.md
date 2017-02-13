@@ -11,6 +11,10 @@ the "Software quality and testing" course.
  * Ant Build window -> "install" 
  * Right-click on src -> "Mark it as sources root"
  * Add libs and tools
+  * Use IvyIDEA plugin -> "use ivy default"
+  * Add libs by "hand" 
+ * Right-click "New Folder" name it UnitTest{s} and mark it as "Test Sources Root"
+ * For CUT or SUT ALT+ENTER generate tests....
 
 
 ### Course 2-3. ###
