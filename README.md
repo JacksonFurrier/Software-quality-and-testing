@@ -3,6 +3,10 @@
 Download the tools to run the examples for the Unit testing part of
 the "Software quality and testing" course.
 
+### Course 0. ###
+
+* Use Windows because Linux is not working at the Lab....
+
 ### Course 1. ###
 * Sample project [uCoach](https://github.com/ucoach)
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
