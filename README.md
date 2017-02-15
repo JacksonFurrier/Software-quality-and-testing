@@ -6,6 +6,7 @@ the "Software quality and testing" course.
 ### Course 0. ###
 
 * Use Windows because Linux is not working at the Lab....
+* [Coding guideline](https://google.github.io/styleguide/javaguide.html)
 
 ### Course 1. ###
 * Sample project [uCoach](https://github.com/ucoach)
