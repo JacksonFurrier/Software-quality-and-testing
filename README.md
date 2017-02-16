@@ -1,4 +1,4 @@
-# Unit testing Tools and Libs #
+# Unit testing, Tools and Libs #
 
 Download the tools to run the examples for the Unit testing part of
 the "Software quality and testing" course.
