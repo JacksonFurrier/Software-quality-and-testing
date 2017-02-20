@@ -3,10 +3,11 @@
 Download the tools to run the examples for the Unit testing part of
 the "Software quality and testing" course.
 
-### Computer lab news ###
-* Use Windows because Linux is not working at the Lab....
 * [Coding guideline](https://google.github.io/styleguide/javaguide.html)
 * Sample project [uCoach](https://github.com/ucoach)
+
+### Computer lab news ###
+* Use Windows because Linux is not working at the Lab....
 
 ### Mandatory programs, tools, libs for sample setup ###
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
