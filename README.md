@@ -45,13 +45,13 @@ the "Software quality and testing" course.
  
 5. Enjoy unit testing.
 
-### Course 1. ###
+### Course 1. authentication-api ###
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Sample project introduction
 * Simple Unit testing example with refactoring
 * Add `ivy.xml` from course_1
 
-### Course 2-3. ###
+### Course 2-3. process-centric-service ###
 
 * [Groovy](https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.8.zip)
 * [Spock if(gradle.works)](https://github.com/spockframework/spock.git)
