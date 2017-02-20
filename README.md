@@ -3,12 +3,10 @@
 Download the tools to run the examples for the Unit testing part of
 the "Software quality and testing" course.
 
+### Computer lab news ### 
 * Use Windows because Linux is not working at the Lab....
 * [Coding guideline](https://google.github.io/styleguide/javaguide.html)
-
-Simple project setup steps
 * Sample project [uCoach](https://github.com/ucoach)
-* Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 
 ### Mandatory programs, tools, libs for sample setup ###
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -26,6 +24,7 @@ Simple project setup steps
  * For CUT or SUT ALT+ENTER generate tests....
 
 ### Course 1. ###
+* Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Sample project introduction
 * Simple Unit testing example with refactoring
 
