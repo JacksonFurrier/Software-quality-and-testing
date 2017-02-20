@@ -42,9 +42,7 @@ the "Software quality and testing" course.
     * Click Ok
  * Recompile to test if adding the sample test class works.
  * If compilation worked, right click on `UnitTest` folder > ` Run All Tests `
- * All tests should pass and you should see `Feb 20, 2017 1:18:45 PM org.junit.platform.launcher.core.ServiceLoaderTestEngineRegistry loadTestEngines
-INFO: Discovered TestEngines with IDs: [junit-jupiter, junit-vintage]
-Process finished with exit code 00
+ * All tests should pass and you should see `Feb 20, 2017 1:18:45 PM org.junit.platform.launcher.core.ServiceLoaderTestEngineRegistry loadTestEngines INFO: Discovered TestEngines with IDs: [junit-jupiter, junit-vintage] Process finished with exit code 0`
  
 5. Enjoy unit testing.
 
