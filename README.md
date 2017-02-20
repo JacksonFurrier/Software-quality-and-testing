@@ -10,12 +10,12 @@ Simple project setup steps
 * Sample project [uCoach](https://github.com/ucoach)
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 
-Mandatory programs, tools, libs for sample setup
+### Mandatory programs, tools, libs for sample setup ###
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Apache ant](http://ant.apache.org/bindownload.cgi)
 * [JetBrains IntelliJ](https://www.jetbrains.com/idea/download/#section=windows)
 
-Sample environment set-up
+### Sample environment set-up ###
  * Right-click on build.xml -> "Add as Ant Build File"
  * Ant Build window -> "install" 
  * Right-click on src -> "Mark it as sources root"
