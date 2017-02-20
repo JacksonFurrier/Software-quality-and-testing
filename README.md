@@ -31,14 +31,19 @@ the "Software quality and testing" course.
     * You can ignore `org.glassfish.ha#ha-api;3.1.9:	Unrecognized artifact type: hk2-jar, will not add this as a dependency in IntelliJ.`
  * Push `CTRL + F9`  to compile and test if dependencies have been resolves
 
- * Right-click on build.xml -> "Add as Ant Build File"
- * Ant Build window -> "install" 
- * Right-click on src -> "Mark it as sources root"
- * Add libs and tools
-  * Use IvyIDEA plugin -> "use ivy default"
-  * Add libs by "hand" 
- * Right-click "New Folder" name it UnitTest{s} and mark it as "Test Sources Root"
- * For CUT or SUT ALT+ENTER generate tests....
+4. Add testing foldery to the project 
+ * Right click on project name `authentication-api` > New > Folder > Name it `UnitTest`
+ * Right click on `Unit test` folder > Mark directory as > Test Sources Root
+ * Open src.ucoach.autu.restclient.util.JsonParser 
+ * Click on the classname `JsonParser` > press `ALT + ENTER` > Create Test 
+    * Testing library JUnit5
+    * For the first tinme IntelliJ won't find it so click on `Fix` if needed
+    * Check all member functions to generate test functions for
+    * Click Ok
+ * Recompile to test if adding the sample test class works.
+ * If compilation worked, right click on `UnitTest` folder > ` Run All Tests `
+ 
+5. Enjoy unit testing.
 
 ### Course 1. ###
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
