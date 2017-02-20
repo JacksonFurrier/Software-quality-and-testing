@@ -15,10 +15,8 @@ the "Software quality and testing" course.
 * [JetBrains IntelliJ](https://www.jetbrains.com/idea/download/#section=windows)
 
 ### Sample environment set-up for ucoach-authentication-api ###
-1. Clone project, run command from cmd, or powershell
-        `code()`
-
-    Markup :  `code()`
+1. Clone project, run command from cmd, or powershell       
+    cmd :  `git clone https://github.com/uCoach/authentication-api.git`
 
 
  * Right-click on build.xml -> "Add as Ant Build File"
