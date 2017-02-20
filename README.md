@@ -29,7 +29,7 @@ the "Software quality and testing" course.
  * Right click on "ivy.xml" > IvyIDEA > Resolve for all modules > Open Project settings > Ivy Settings set to "Use ivy default"
  * Right click on "ivy.xml" > IvyIDEA > Resolve for authentication-api module 
     * You can ignore `org.glassfish.ha#ha-api;3.1.9:	Unrecognized artifact type: hk2-jar, will not add this as a dependency in IntelliJ.`
- * Push 'CTRL + F9'  to compile and test if dependencies have been resolves
+ * Push `CTRL + F9`  to compile and test if dependencies have been resolves
 
  * Right-click on build.xml -> "Add as Ant Build File"
  * Ant Build window -> "install" 
