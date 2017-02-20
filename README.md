@@ -6,7 +6,7 @@ the "Software quality and testing" course.
 * Use Windows because Linux is not working at the Lab....
 * [Coding guideline](https://google.github.io/styleguide/javaguide.html)
 
-Project setup steps
+Simple project setup steps
 * Sample project [uCoach](https://github.com/ucoach)
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Set-up environment
