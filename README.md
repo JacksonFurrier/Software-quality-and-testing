@@ -14,7 +14,7 @@ the "Software quality and testing" course.
 * [Apache ant](http://ant.apache.org/bindownload.cgi)
 * [JetBrains IntelliJ](https://www.jetbrains.com/idea/download/#section=windows)
 
-### Sample environment set-up for ucoach-authentication-api ###
+### Sample environment set-up for [ucoach-authentication-api](https://github.com/uCoach/authentication-api) ###
 1. Clone project, run command from cmd, or powershell `git clone https://github.com/uCoach/authentication-api.git`
 2. Start IntelliJ and Import project from the directory you've cloned into.
  * File > Project Structure > Project SDK. Set it to the installed root directory of your JDK ( 1.8.x mandatory )
@@ -45,17 +45,20 @@ the "Software quality and testing" course.
  
 5. Enjoy unit testing.
 
-### Course 1. ###
+### Course 1. authentication-api ###
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Sample project introduction
 * Simple Unit testing example with refactoring
+* Add `ivy.xml` from course_1
 
-### Course 2-3. ###
+### Course 2-3. process-centric-service ###
 
+* Clone/Fork/Download [process-centric-service](https://github.com/uCoach/process-centric-service)
 * [Groovy](https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.8.zip)
 * [Spock if(gradle.works)](https://github.com/spockframework/spock.git)
 * [Spock else](https://search.maven.org/remotecontent?filepath=io/sniffy/spock/3.1.0-RC10/spock-3.1.0-RC10.jar)
 * [TestNG](https://github.com/cbeust/testng.git)
+* Add `ivy.xml` from course_2
 
 ### Course 4. ###
  
