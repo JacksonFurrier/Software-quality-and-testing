@@ -17,7 +17,9 @@ the "Software quality and testing" course.
 ### Sample environment set-up for ucoach-authentication-api ###
 1. Clone project, run command from cmd, or powershell       
     cmd :  `git clone https://github.com/uCoach/authentication-api.git`
-
+2. Start IntelliJ and Import project from the directory you've cloned into.
+ * Click Import Project > "Create Project from existing sources" > Next > Next > Next > Next > Next > Finish
+ * 
 
  * Right-click on build.xml -> "Add as Ant Build File"
  * Ant Build window -> "install" 
