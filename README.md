@@ -25,6 +25,7 @@ the "Software quality and testing" course.
  
 3. Install Ivy IDEA and configure
  * File > Settings > Plugins > Search in repositories for `IvyIDEA` > Click install and restart.
+ * File > Settings > IvyIDEA > Ivy Settings set to "Use ivy default"
  * Right click on "ivy.xml" > IvyIDEA > Resolve for all modules > Open Project settings > Ivy Settings set to "Use ivy default"
  * Right click on "ivy.xml" > IvyIDEA > Resolve for authentication-api module 
     * You can ignore `org.glassfish.ha#ha-api;3.1.9:	Unrecognized artifact type: hk2-jar, will not add this as a dependency in IntelliJ.`
