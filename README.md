@@ -14,7 +14,11 @@ the "Software quality and testing" course.
 * [Apache ant](http://ant.apache.org/bindownload.cgi)
 * [JetBrains IntelliJ](https://www.jetbrains.com/idea/download/#section=windows)
 
-### Sample environment set-up ###
+### Sample environment set-up for ucoach-authentication-api ###
+1. Clone project, run command from cmd, or powershell
+ Markup :  ============= (below H1 text)
+
+
  * Right-click on build.xml -> "Add as Ant Build File"
  * Ant Build window -> "install" 
  * Right-click on src -> "Mark it as sources root"
