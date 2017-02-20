@@ -16,7 +16,7 @@ the "Software quality and testing" course.
 
 ### Sample environment set-up for ucoach-authentication-api ###
 1. Clone project, run command from cmd, or powershell
- Markup :  ============= (below H1 text)
+        Markup :  ============= (below H1 text)
 
 
  * Right-click on build.xml -> "Add as Ant Build File"
