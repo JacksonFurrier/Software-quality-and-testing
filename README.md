@@ -33,7 +33,7 @@ the "Software quality and testing" course.
 
 4. Add testing foldery to the project 
  * Right click on project name `authentication-api` > New > Folder > Name it `UnitTest`
- * Right click on `Unit test` folder > Mark directory as > Test Sources Root
+ * Right click on `UnitTest` folder > Mark directory as > Test Sources Root
  * Open src.ucoach.autu.restclient.util.JsonParser 
  * Click on the classname `JsonParser` > press `ALT + ENTER` > Create Test 
     * Testing library JUnit5
