@@ -3,12 +3,10 @@
 Download the tools to run the examples for the Unit testing part of
 the "Software quality and testing" course.
 
-### Course 0. ###
-
 * Use Windows because Linux is not working at the Lab....
 * [Coding guideline](https://google.github.io/styleguide/javaguide.html)
 
-### Course 1. ###
+Project setup steps
 * Sample project [uCoach](https://github.com/ucoach)
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Set-up environment
@@ -21,6 +19,9 @@ the "Software quality and testing" course.
  * Right-click "New Folder" name it UnitTest{s} and mark it as "Test Sources Root"
  * For CUT or SUT ALT+ENTER generate tests....
 
+### Course 1. ###
+* Sample project introduction
+* Simple Unit testing example with refactoring
 
 ### Course 2-3. ###
 
