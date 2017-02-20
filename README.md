@@ -15,8 +15,7 @@ the "Software quality and testing" course.
 * [JetBrains IntelliJ](https://www.jetbrains.com/idea/download/#section=windows)
 
 ### Sample environment set-up for ucoach-authentication-api ###
-1. Clone project, run command from cmd, or powershell       
-    cmd :  `git clone https://github.com/uCoach/authentication-api.git`
+1. Clone project, run command from cmd, or powershell `git clone https://github.com/uCoach/authentication-api.git`
 2. Start IntelliJ and Import project from the directory you've cloned into.
  * File > Project Structure > Project SDK. Set it to the installed root directory of your JDK ( 1.8.x mandatory )
  * Project language level, set it to "SDK Default"
