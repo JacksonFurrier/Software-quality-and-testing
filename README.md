@@ -19,7 +19,7 @@ the "Software quality and testing" course.
     cmd :  `git clone https://github.com/uCoach/authentication-api.git`
 2. Start IntelliJ and Import project from the directory you've cloned into.
  * Click Import Project > "Create Project from existing sources" > Next > Next > Next > Next > Next > Finish
- * 
+ * Double click on project name > Right-click on 'build.xml', "Add as Ant build file"
 
  * Right-click on build.xml -> "Add as Ant Build File"
  * Ant Build window -> "install" 
