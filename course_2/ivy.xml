@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.    
+ -->
+ <ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+   <info
+    organisation="uCoach"
+    module="Auth"
+    status="integration">
+  </info>
+  
+  <dependencies>
+    <!-- JAX-WS bundle dependency --> 
+    <dependency org="com.sun.xml.ws" name="jaxws-rt" rev="2.2.8"/>
+    
+    <!-- Other dependencies -->
+    <dependency org="javax.ejb" name="javax.ejb-api" rev="3.2"/>
+    <dependency org="org.eclipse.persistence" name="javax.persistence" rev="2.1.0"/>
+    <dependency org="org.eclipse.persistence" name="org.eclipse.persistence.jpa" rev="2.5.2"/>
+    <dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.3.2.GA"/>
+    <dependency org="net.sf.dozer" name="dozer" rev="5.5.1"/>
+    <dependency org="joda-time" name="joda-time" rev="2.4"/>
+    <dependency org="org.slf4j" name="slf4j-nop" rev="1.7.7"/>
+    <dependency org="org.json" name="json" rev="20140107"/>
+    <dependency org="org.glassfish.jersey.core" name="jersey-common" rev="2.11"/>
+    <dependency org="org.glassfish.jersey.core" name="jersey-server" rev="2.11"/>
+    <dependency org="org.glassfish.jersey.core" name="jersey-client" rev="2.11"/>
+    <dependency org="org.glassfish.jersey.containers" name="jersey-container-servlet" rev="2.11"/>
+    <dependency org="org.glassfish.jersey.containers" name="jersey-container-jetty-http" rev="2.11"/>
+    <dependency org="org.glassfish.jersey.containers" name="jersey-container-jdk-http" rev="2.11"/>
+    <dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.4.2">
+        <artifact name="jackson-core" type="jar"/>
+    </dependency>
+    <dependency org="com.fasterxml.jackson.module" name="jackson-module-jaxb-annotations" rev="2.4.1">
+        <artifact name="jackson-module-jaxb-annotations" type="jar"/>
+    </dependency>
+    <dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.4.2">
+        <artifact name="jackson-databind" type="jar"/>
+    </dependency>
+    <dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.4.2">
+        <artifact name="jackson-annotations" type="jar"/>
+    </dependency>
+    <dependency org="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-json-provider" rev="2.4.2">
+        <artifact name="jackson-jaxrs-json-provider" type="jar"/>
+    </dependency>
+    <dependency org="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-base" rev="2.4.2">
+        <artifact name="jackson-jaxrs-base" type="jar"/>
+    </dependency>
+    <dependency org="org.glassfish.jersey.media" name="jersey-media-json-jackson" rev="2.11"/>
+    
+    <dependency org="org.twitter4j" name="twitter4j-core" rev="4.0.2"/>
+
+    <dependency org="org.spockframework" name="spock-core" rev="0.7-groovy-2.0"/>
+  </dependencies>
+</ivy-module>
