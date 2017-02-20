@@ -49,6 +49,7 @@ the "Software quality and testing" course.
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Sample project introduction
 * Simple Unit testing example with refactoring
+* Add `ivy.xml` from course_1
 
 ### Course 2-3. ###
 
@@ -56,6 +57,7 @@ the "Software quality and testing" course.
 * [Spock if(gradle.works)](https://github.com/spockframework/spock.git)
 * [Spock else](https://search.maven.org/remotecontent?filepath=io/sniffy/spock/3.1.0-RC10/spock-3.1.0-RC10.jar)
 * [TestNG](https://github.com/cbeust/testng.git)
+* Add `ivy.xml` from course_2
 
 ### Course 4. ###
  
