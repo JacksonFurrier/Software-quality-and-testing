@@ -53,7 +53,7 @@ the "Software quality and testing" course.
 * Add `ivy.xml` from course_1
 
 ### Course 1. authentication-api AUTO CONFIGURATION ###
-* GoTo Folder course_1 and follow the steps there
+* GoTo Folder [course_1](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_1) and follow the steps there
 
 ### Course 2-3. process-centric-service MANUAL CONFIGURATION ###
 
@@ -65,7 +65,7 @@ the "Software quality and testing" course.
 * Add `ivy.xml` from course_2
 
 ###  Course 2-3. process-centric-service AUTO CONFIGURATION ###
-* GoTo Folder course_2 and follow the steps there
+* GoTo Folder [course_2](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_2) and follow the steps there
 
 ### Course 4. ###
  
