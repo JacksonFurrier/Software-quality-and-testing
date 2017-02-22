@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_authentication-api" default="compile.module.authentication-api">
+  <dirname property="module.authentication-api.basedir" file="${ant.file.module_authentication-api}"/>
+  
+  <property name="module.jdk.home.authentication-api" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.authentication-api" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.authentication-api" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.authentication-api" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="authentication-api.output.dir" value="undefined"/>
+  <property name="authentication-api.testoutput.dir" value="undefined"/>
+  
+  <path id="authentication-api.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="authentication-api.module.production.classpath">
+    <path refid="${module.jdk.classpath.authentication-api}"/>
+    <path refid="library.bundles-jackson-annotations-2.3.2.classpath"/>
+  </path>
+  
+  <path id="authentication-api.runtime.production.module.classpath">
+    <path refid="library.bundles-jackson-annotations-2.3.2.classpath"/>
+  </path>
+  
+  <path id="authentication-api.module.classpath">
+    <path refid="${module.jdk.classpath.authentication-api}"/>
+    <path refid="library.bundles-jackson-annotations-2.3.2.classpath"/>
+  </path>
+  
+  <path id="authentication-api.runtime.module.classpath">
+    <path refid="library.bundles-jackson-annotations-2.3.2.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.authentication-api">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.authentication-api">
+    <patternset refid="excluded.from.module.authentication-api"/>
+  </patternset>
+  
+  <path id="authentication-api.module.sourcepath">
+    <dirset dir="${module.authentication-api.basedir}/../../authentication-api">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  <path id="authentication-api.module.test.sourcepath">
+    <dirset dir="${module.authentication-api.basedir}/../../authentication-api">
+      <include name="UnitTests"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.authentication-api" depends="compile.module.authentication-api.production,compile.module.authentication-api.tests" description="Compile module authentication-api"/>
+  
+  <target name="compile.module.authentication-api.production" depends="register.custom.compilers" description="Compile module authentication-api; production classes">
+    <mkdir dir="${authentication-api.output.dir}"/>
+    <javac2 destdir="${authentication-api.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.authentication-api}/javac">
+      <compilerarg line="${compiler.args.authentication-api}"/>
+      <bootclasspath refid="authentication-api.module.bootclasspath"/>
+      <classpath refid="authentication-api.module.production.classpath"/>
+      <src refid="authentication-api.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.authentication-api"/>
+    </javac2>
+    
+    <copy todir="${authentication-api.output.dir}">
+      <fileset dir="${module.authentication-api.basedir}/../src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.authentication-api.tests" depends="register.custom.compilers,compile.module.authentication-api.production" description="compile module authentication-api; test classes" unless="skip.tests">
+    <mkdir dir="${authentication-api.testoutput.dir}"/>
+    <javac2 destdir="${authentication-api.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.authentication-api}/javac">
+      <compilerarg line="${compiler.args.authentication-api}"/>
+      <bootclasspath refid="authentication-api.module.bootclasspath"/>
+      <classpath refid="authentication-api.module.classpath"/>
+      <src refid="authentication-api.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.authentication-api"/>
+    </javac2>
+    
+    <copy todir="${authentication-api.testoutput.dir}">
+      <fileset dir="${module.authentication-api.basedir}/../UnitTests">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.authentication-api" description="cleanup module">
+    <delete dir="${authentication-api.output.dir}"/>
+    <delete dir="${authentication-api.testoutput.dir}"/>
+  </target>
+</project>

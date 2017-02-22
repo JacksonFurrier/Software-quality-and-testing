@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="authentication-api" default="all">
+  
+  
+  <property file="authentication-api.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.zip"/>
+    <include name="*.ear"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.bundles-jackson-annotations-2.3.2.classpath">
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-jackson-annotations-2.3.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-jackson-databind-2.3.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-jackson-jaxrs-base-2.3.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-jackson-jaxrs-json-provider-2.3.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-jackson-module-jaxb-annotations-2.3.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-javassist-3.18.1-GA.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-jersey-guava-2.13.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/bundles-json-simple-1.1.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/hk2-jars-ha-api-3.1.9.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-FastInfoset-1.2.12.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-activation-1.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-ant-1.6.5.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-antlr-2.7.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-aopalliance-repackaged-2.3.0-b10.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-asm-1.5.3.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-asm-attrs-1.5.3.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-asm-debug-all-5.0.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-c3p0-0.9.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-cglib-2.1_3.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-commons-beanutils-1.9.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-commons-collections-3.2.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-commons-lang3-3.2.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-commons-logging-1.0.4.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-dom4j-1.6.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-dozer-5.5.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-ehcache-1.2.3.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-ejb3-persistence-1.0.1.GA.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-el-api-2.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-el-impl-2.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-gmbal-api-only-3.1.0-b001.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hibernate-3.2.6.ga.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hibernate-annotations-3.3.1.GA.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hibernate-c3p0-3.3.2.GA.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hibernate-commons-annotations-3.2.0.Final.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hibernate-core-3.6.9.Final.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hibernate-entitymanager-3.3.2.GA.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hk2-api-2.3.0-b10.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hk2-locator-2.3.0-b10.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-hk2-utils-2.3.0-b10.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-istack-commons-runtime-2.15.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jackson-core-2.4.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javassist-3.4.GA.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.annotation-api-1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.ejb-api-3.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.inject-1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.inject-2.3.0-b10.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.persistence-2.1.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.servlet-api-3.1.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.transaction-api-1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.ws.rs-api-2.0.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.xml.rpc-api-1.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-javax.xml.soap-api-1.3.5.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jaxb-api-2.2.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jaxb-core-2.2.7.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jaxb-impl-2.2.7.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jaxb-xjc-2.2.7.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jaxws-api-2.2.9.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jaxws-rt-2.2.8.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jboss-jacc-api_JDK4-1.1.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jcl-over-slf4j-1.7.5.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-client-2.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-common-2.13.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-container-jdk-http-2.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-container-jetty-http-2.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-container-servlet-2.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-container-servlet-core-2.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-media-json-jackson-2.13.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jersey-server-2.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jetty-continuation-9.1.1.v20140108.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jetty-http-9.1.1.v20140108.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jetty-io-9.1.1.v20140108.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jetty-server-9.1.1.v20140108.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jetty-util-9.1.1.v20140108.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-joda-convert-1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-joda-time-2.4.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-json-20140107.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jsr173_api-1.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jsr181-api-1.0-MR1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-jta-1.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-junit-4.11.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-management-api-3.1.0-b001.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-mimepull-1.9.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-mysql-connector-java-5.1.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-org.eclipse.persistence.antlr-2.5.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-org.eclipse.persistence.asm-2.5.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-org.eclipse.persistence.core-2.5.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-org.eclipse.persistence.jpa-2.5.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-org.eclipse.persistence.jpa.jpql-2.5.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-org.osgi.core-4.3.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-osgi-resource-locator-1.0.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-policy-2.3.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-resolver-20050927.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-saaj-api-1.3.4.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-saaj-impl-1.3.20.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-slf4j-api-1.7.7.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-slf4j-nop-1.7.7.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-stax-api-1.0.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-stax-ex-1.7.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-stax2-api-3.1.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-streambuffer-1.5.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-validation-api-1.1.0.Final.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-woodstox-core-asl-4.1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-xmlbeans-2.5.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/jars-xmlbeans-xpath-2.5.0.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/.idea/module_authentication-api.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.authentication-api" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.authentication-api" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>
