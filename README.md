@@ -17,14 +17,15 @@ the "Software quality and testing" course.
 ### Sample environment set-up for [ucoach-authentication-api](https://github.com/uCoach/authentication-api) ###
 1. Clone project, run command from cmd, or powershell `git clone https://github.com/uCoach/authentication-api.git`
 2. Start IntelliJ and Import project from the directory you've cloned into.
+ * Click Import Project > "Create Project from existing sources" > Next > Next > Next > Next > Next > Finish
  * File > Project Structure > Project SDK. Set it to the installed root directory of your JDK ( 1.8.x mandatory )
  * Project language level, set it to "SDK Default"
- * Click Import Project > "Create Project from existing sources" > Next > Next > Next > Next > Next > Finish
  * Double click on project name > Right-click on 'build.xml', "Add as Ant build file"
  * On the Ant Build Window double click "install"
  
 3. Install Ivy IDEA and configure
- * File > Plugins > Search in repositories for `IvyIDEA` > Click install and restart.
+ * File > Settings > Plugins > Search in repositories for `IvyIDEA` > Click install and restart.
+ * File > Settings > IvyIDEA > Ivy Settings set to "Use ivy default"
  * Right click on "ivy.xml" > IvyIDEA > Resolve for all modules > Open Project settings > Ivy Settings set to "Use ivy default"
  * Right click on "ivy.xml" > IvyIDEA > Resolve for authentication-api module 
     * You can ignore `org.glassfish.ha#ha-api;3.1.9:	Unrecognized artifact type: hk2-jar, will not add this as a dependency in IntelliJ.`
