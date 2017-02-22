@@ -1,5 +1,7 @@
-### Course_1 ###
 
+
+### Course_1 ###
+  * Use project above `authentication-api`
   * Set JDK root path under File > Project Structure > Project > Project SDK > New (Depending on your configuration it should be under 
  `Program Files` or `Program Files(x86)` 
   * Set Project Language level under File > Project Structure > Project > Project Language Level to `SDK Default`
