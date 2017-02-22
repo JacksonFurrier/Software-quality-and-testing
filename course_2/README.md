@@ -20,3 +20,4 @@ Install Ivy IDEA and configure
 ### If IvyIDEA plugin is INSTALLED ###
 Install Ivy IDEA and configure
  * Right click on "ivy.xml" > IvyIDEA > Resolve for process-centric-service module 
+ * Push Build > `Rebuild Project` to compile and test if dependencies have been resolves
