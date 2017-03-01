@@ -46,13 +46,16 @@ the "Software quality and testing" course.
  
 5. Enjoy unit testing.
 
-### Course 1. authentication-api ###
+### Course 1. authentication-api MANUAL CONFIGURATION ###
 * Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
 * Sample project introduction
 * Simple Unit testing example with refactoring
 * Add `ivy.xml` from course_1
 
-### Course 2-3. process-centric-service ###
+### Course 1. authentication-api AUTO CONFIGURATION ###
+* GoTo Folder [course_1](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_1) and follow the steps there
+
+### Course 2-3. process-centric-service MANUAL CONFIGURATION ###
 
 * Clone/Fork/Download [process-centric-service](https://github.com/uCoach/process-centric-service)
 * [Groovy](https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.8.zip)
@@ -60,6 +63,9 @@ the "Software quality and testing" course.
 * [Spock else](https://search.maven.org/remotecontent?filepath=io/sniffy/spock/3.1.0-RC10/spock-3.1.0-RC10.jar)
 * [TestNG](https://github.com/cbeust/testng.git)
 * Add `ivy.xml` from course_2
+
+###  Course 2-3. process-centric-service AUTO CONFIGURATION ###
+* GoTo Folder [course_2](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_2) and follow the steps there
 
 ### Course 4. ###
  
