@@ -1,0 +1,112 @@
+DROP DATABASE IF EXISTS `ucoach_data_service`;
+CREATE DATABASE `ucoach_data_service`;
+USE `ucoach_data_service`;
+
+CREATE TABLE `ucoach_data_service`.`coach` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `birthdate` datetime DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `ucoach_data_service`.`user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `birthdate` datetime DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `twitter_username` varchar(100) DEFAULT NULL,
+  `coach_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_email` (`email`),
+  KEY `FK36EBCBF143119A` (`coach_id`),
+  CONSTRAINT `FK36EBCBF143119A` FOREIGN KEY (`coach_id`) REFERENCES `coach` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `ucoach_data_service`.`google_tokens` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `access_token` varchar(100) NOT NULL,
+  `refresh_token` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK1BDA6260E81B77BA` (`user_id`),
+  CONSTRAINT `FK1BDA6260E81B77BA` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `ucoach_data_service`.`hm_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `units` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `ucoach_data_service`.`health_measure` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `hm_type_id` int(11) NOT NULL,
+  `value` float NOT NULL,
+  `created_date` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK4828327BE81B77BA` (`user_id`),
+  KEY `FK4828327BDB467AA5` (`hm_type_id`),
+  CONSTRAINT `FK4828327BDB467AA5` FOREIGN KEY (`hm_type_id`) REFERENCES `hm_type` (`id`),
+  CONSTRAINT `FK4828327BE81B77BA` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `ucoach_data_service`.`goal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `hm_type_id` int(11) NOT NULL,
+  `frequency` varchar(45) DEFAULT NULL,
+  `objective` varchar(45) DEFAULT NULL,
+  `value` float DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `due_date` datetime DEFAULT NULL,
+  `achieved` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `FK307F13E81B77BA` (`user_id`),
+  KEY `FK307F13DB467AA5` (`hm_type_id`),
+  CONSTRAINT `FK307F13DB467AA5` FOREIGN KEY (`hm_type_id`) REFERENCES `hm_type` (`id`),
+  CONSTRAINT `FK307F13E81B77BA` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `ucoach_data_service`.`coach`
+  (`firstname`,`lastname`)
+  VALUES
+  ("Charles","Ferrari");
+
+INSERT INTO `ucoach_data_service`.`user`
+  (`firstname`,`lastname`, `birthdate`,`email`,`password`, `twitter_username`,`coach_id`)
+  VALUES
+  ("Ana","Daniel", "1990-01-01", "anidi@mail.com","encryptedPassword", "anidi", 1),
+  ("Fede","Fiorini", "1992-01-01", "fede@mail.com","encryptedPassword2", "freddy", 1);
+
+INSERT INTO `ucoach_data_service`.`hm_type`
+  (`name`,`units`)
+  VALUES
+  ("weight", "kg"),
+  ("height", "cm"),
+  ("steps", "steps"),
+  ("heart rate","bpm"),
+  ("calories","calories"),
+  ("running", "km"),
+  ("walking", "km"),
+  ("cycling", "km"),
+  ("sleeping", "hours");
+
+INSERT INTO `ucoach_data_service`.`health_measure`
+  (`user_id`,`hm_type_id`,`value`,`created_date`)
+  VALUES
+  (1,1,60.00,"2016-02-01"),
+  (1,2,159.00,"2016-02-01");
+
+INSERT INTO `ucoach_data_service`.`goal`
+  (`user_id`,`hm_type_id`,`frequency`,`objective`,`value`,`achieved`, `created_date`)
+  VALUES
+  (1,2,"weekly","=",160.00,0,"2016-02-01"),
+  (1,2,"yearly","=",200.00,0,"2016-02-01");

@@ -1,0 +1,91 @@
+DROP TABLE IF EXISTS `coach`;
+CREATE TABLE `coach` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `birthdate` datetime DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `birthdate` datetime DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `twitter_username` varchar(100) DEFAULT NULL,
+  `coach_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_email` (`email`),
+  KEY `FK36EBCBF143119A` (`coach_id`),
+  CONSTRAINT `FK36EBCBF143119A` FOREIGN KEY (`coach_id`) REFERENCES `coach` (`id`)
+) DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `google_tokens`;
+CREATE TABLE `google_tokens` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `access_token` varchar(100) NOT NULL,
+  `refresh_token` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK1BDA6260E81B77BA` (`user_id`),
+  CONSTRAINT `FK1BDA6260E81B77BA` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `hm_type`;
+CREATE TABLE `hm_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `units` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `health_measure`;
+CREATE TABLE `health_measure` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `hm_type_id` int(11) NOT NULL,
+  `value` float NOT NULL,
+  `created_date` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK4828327BE81B77BA` (`user_id`),
+  KEY `FK4828327BDB467AA5` (`hm_type_id`),
+  CONSTRAINT `FK4828327BDB467AA5` FOREIGN KEY (`hm_type_id`) REFERENCES `hm_type` (`id`),
+  CONSTRAINT `FK4828327BE81B77BA` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `goal`;
+CREATE TABLE `goal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `hm_type_id` int(11) NOT NULL,
+  `frequency` varchar(45) DEFAULT NULL,
+  `objective` varchar(45) DEFAULT NULL,
+  `value` float DEFAULT NULL,
+  `created_date` datetime DEFAULT NULL,
+  `due_date` datetime DEFAULT NULL,
+  `achieved` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `FK307F13E81B77BA` (`user_id`),
+  KEY `FK307F13DB467AA5` (`hm_type_id`),
+  CONSTRAINT `FK307F13DB467AA5` FOREIGN KEY (`hm_type_id`) REFERENCES `hm_type` (`id`),
+  CONSTRAINT `FK307F13E81B77BA` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) DEFAULT CHARSET=latin1;
+
+INSERT INTO `hm_type`
+  (`name`,`units`)
+  VALUES
+  ("weight", "kg"),
+  ("height", "cm"),
+  ("steps", "steps"),
+  ("heart rate","bpm"),
+  ("calories","calories"),
+  ("running", "km"),
+  ("walking", "km"),
+  ("cycling", "km"),
+  ("sleeping", "hours");
