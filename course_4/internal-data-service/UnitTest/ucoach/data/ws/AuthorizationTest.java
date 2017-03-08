@@ -10,9 +10,6 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by szucs on 2/13/2017.
- */
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(Authorization.class)
 public class AuthorizationTest {
