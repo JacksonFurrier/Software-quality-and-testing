@@ -76,14 +76,14 @@ the "Software quality and testing" course.
 Under the folder [Internal data service](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_4/internal-data-service/src/ucoach/data/ws)
 meet the following requirments
 * Unit test the classes in the folder such that
- * Tools for unit testing is a free of choose, you can use JUnit, TestNG, Spock or whatever unit testing framework
- * Hand the assigment in person at EIT Digital CLC, please write email before to match timespan and date for reviewing the assigment
- * **Deadline 2017. May. 8**
- * Reach at least 20% line coverage to pass the course, grading goes such that:
-   * 20% - 2 
-   * 30% - 3 
-   * 40% - 4 		
-   * 60% - 5 
+  * Tools for unit testing is a free of choose, you can use JUnit, TestNG, Spock or whatever unit testing framework
+  * Hand the assigment in person at EIT Digital CLC, please write email before to match timespan and date for reviewing the assigment
+  * **Deadline 2017. May. 8**
+  * Reach at least 20% line coverage to pass the course, grading goes such that:
+    * 20% - 2 
+    * 30% - 3 
+    * 40% - 4 		
+    * 60% - 5 
 	 
 
 ### Contact ###
