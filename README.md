@@ -80,10 +80,10 @@ meet the following requirments
 	* Hand the assigment in person at EIT Digital CLC, please write email before 
 	* Deadline 2017. May. 8
 	* Reach at least 20% coveragot to pass the course, grading goes such that
-		* 20% - 2 
-		* 30% - 3 
-		* 40% - 4 		
-		* 60% - 5 
+	 * 20% - 2 
+	 * 30% - 3 
+	 * 40% - 4 		
+	 * 60% - 5 
 	 
 
 ### Contact ###
