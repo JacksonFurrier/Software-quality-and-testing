@@ -9,6 +9,7 @@
 Implement a command line program in JAVA which can
  * Sort the numbers given on the cmd line argument 
  * Can convert Strings to Numbers and sorts them
+ * Can decide if the given argument number is prime
   
 ### 1st task ###   
 Login check the environment
