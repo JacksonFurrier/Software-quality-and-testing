@@ -2,8 +2,9 @@
 
 ### Course_1 ###
   * Write test
-  * Clone the repository
-  * Try to push/pull/commit to the repo
+  * If time left 
+    * Clone the repository
+    * Try to push/pull/commit to the repo
 
 ### 0th task - Test ###
 Implement a command line program in JAVA which can
