@@ -89,4 +89,4 @@ meet the following requirments
 ### Contact ###
 
 * Adam Istvan Szucs
-* szucs.adamistvan.89@gmail.com :subject[2016_Software_Testing]
+* szaqaei@inf.elte.hu :subject[2016_Software_Testing]
