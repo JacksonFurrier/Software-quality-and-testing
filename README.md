@@ -54,7 +54,7 @@ meet the following requirments
   * Tools for unit testing is a free of choose, you can use JUnit, TestNG, Spock or whatever unit testing framework
   * Hand the assigment in person at EIT Digital CLC, please write email before to match timespan and date for reviewing the assigment
   * **Deadline 2018. March. 31**
-  * Reach at least 20% line coverage to pass the course, grading goes such that:
+  * Reach at least 50% line coverage to pass the course, grading goes such that:
     * ">=" 50% - 2 
     * ">=" 60% - 3 
     * ">=" 70% - 4 		
