@@ -4,7 +4,7 @@ Download the tools to run the examples for the Unit testing part of
 the "Software quality and testing" course.
 
 * [Coding guideline](https://google.github.io/styleguide/javaguide.html)
-* Sample project [uCoach](https://github.com/ucoach)
+* Sample project [ToBeAnnounced](https://github.com)
 
 ### Computer lab news ###
 * Use Windows because Linux is not working at the Lab....
@@ -89,4 +89,4 @@ meet the following requirments
 ### Contact ###
 
 * Adam Istvan Szucs
-* szaqaei@inf.elte.hu :subject[2016_Software_Testing]
+* szaqaei@inf.elte.hu :subject[2018_Software_Testing]
