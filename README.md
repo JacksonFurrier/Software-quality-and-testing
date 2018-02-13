@@ -14,8 +14,8 @@ the "Software quality and testing" course.
 * [Apache ant](http://ant.apache.org/bindownload.cgi)
 * [JetBrains IntelliJ](https://www.jetbrains.com/idea/download/#section=windows)
 
-### Sample environment set-up for [ucoach-authentication-api](https://github.com/uCoach/authentication-api) ###
-1. Clone project, run command from cmd, or powershell `git clone https://github.com/uCoach/authentication-api.git`
+### Sample environment set-up for [ToBeAnnounced](https://github.com) ###
+1. Clone project, run command from cmd, or powershell `git clone https://github.com`
 2. Start IntelliJ and Import project from the directory you've cloned into.
  * Click Import Project > "Create Project from existing sources" > Next > Next > Next > Next > Next > Finish
  * File > Project Structure > Project SDK. Set it to the installed root directory of your JDK ( 1.8.x mandatory )
@@ -46,39 +46,14 @@ the "Software quality and testing" course.
  
 5. Enjoy unit testing.
 
-### Course 1. authentication-api MANUAL CONFIGURATION ###
-* Clone/Fork/Download [authentication-api](https://github.com/uCoach/authentication-api)
-* Sample project introduction
-* Simple Unit testing example with refactoring
-* Add `ivy.xml` from course_1
-
-### Course 1. authentication-api AUTO CONFIGURATION ###
-* GoTo Folder [course_1](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_1) and follow the steps there
-
-### Course 2-3. process-centric-service MANUAL CONFIGURATION ###
-
-* Clone/Fork/Download [process-centric-service](https://github.com/uCoach/process-centric-service)
-* [Groovy](https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.8.zip)
-* [Spock if(gradle.works)](https://github.com/spockframework/spock.git)
-* [Spock else](https://search.maven.org/remotecontent?filepath=io/sniffy/spock/3.1.0-RC10/spock-3.1.0-RC10.jar)
-* [TestNG](https://github.com/cbeust/testng.git)
-* Add `ivy.xml` from course_2
-
-###  Course 2-3. process-centric-service AUTO CONFIGURATION ###
-* GoTo Folder [course_2](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_2) and follow the steps there
-
-### Course 4. ###
- 
-* [PowerMockito, Mockito, JUnit 4.12](http://dl.bintray.com/johanhaleby/generic/powermock-mockito2-junit-1.6.6.zip)
-
 ### Assignment ###
 
-Under the folder [Internal data service](https://github.com/JacksonFurrier/Software-quality-and-testing/tree/master/course_4/internal-data-service/src/ucoach/data/ws)
+Under the folder [ToBeAnnounced](https://github.com)
 meet the following requirments
 * Unit test the classes in the folder such that
   * Tools for unit testing is a free of choose, you can use JUnit, TestNG, Spock or whatever unit testing framework
   * Hand the assigment in person at EIT Digital CLC, please write email before to match timespan and date for reviewing the assigment
-  * **Deadline 2017. May. 8**
+  * **Deadline 2018. March. 31**
   * Reach at least 20% line coverage to pass the course, grading goes such that:
     * ">=" 20% - 2 
     * ">=" 30% - 3 
