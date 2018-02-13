@@ -1,7 +1,7 @@
 
 
 ### Course_1 ###
-  *
+  * Write test
   * Clone the repository
   * Try to push/pull/commit to the repo
 
