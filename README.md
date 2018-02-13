@@ -7,7 +7,7 @@ the "Software quality and testing" course.
 * Sample project [ToBeAnnounced](https://github.com)
 
 ### Computer lab news ###
-* Use Windows because Linux is not working at the Lab....
+* Use Windows if possible
 
 ### Mandatory programs, tools, libs for sample setup ###
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
