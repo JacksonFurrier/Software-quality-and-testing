@@ -6,11 +6,9 @@
   * Try to push/pull/commit to the repo
 
 ### 0th task - Test ###
-Implement a Prime sieve in Java( u can either use cmd/sublime or IDEs), find the first 1000000 primes!
- * Create a class PrimeSieve which 
-  * Has a function Calculate() param: Number of primes result: an array of the first param primes
-  *  
-  *
+Implement a command line program in JAVA which can
+ * Sort the numbers given on the cmd line argument 
+ * Can convert Strings to Numbers and sorts them
   
 ### 1st task ###   
 Login check the environment
