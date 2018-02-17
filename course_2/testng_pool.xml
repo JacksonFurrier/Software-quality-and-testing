@@ -1,7 +1,0 @@
-<suite name="RandomJokes" >
-    <test name="RandomJokes ThreadPool">
-        <classes>
-            <class name="ucoach.external.RandomJokesClientTestNG_ThreadPool" />
-        </classes>
-    </test>
-</suite>
