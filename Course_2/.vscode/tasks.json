@@ -1,0 +1,39 @@
+{
+	"version": "0.1.0",
+	"command": "gradle",
+	"isShellCommand": true,
+	"args": [""], 
+	"tasks": [
+		{
+			"taskName": "getSword",
+			"showOutput": "always",
+			"echoCommand": true
+		},
+		{
+			"taskName": "run",
+			"showOutput": "silent",
+			"isBuildCommand": true,
+			"problemMatcher": {
+				"owner": "external",
+				"fileLocation": "absolute",
+				"pattern": [
+					{
+						"regexp": "^(.+\\.java):(\\d):(?:\\s+(error)):(?:\\s+(.*))$",
+						"file": 1,
+						"location": 2,
+						"severity": 3,
+						"message": 4,
+						"loop": true
+					}
+				]
+			}
+		},
+		{
+			"taskName": "run-Tests",
+			"showOutput": "always",
+			"isBuildCommand": true,
+			"echoCommand": true
+		}
+
+	]	
+}

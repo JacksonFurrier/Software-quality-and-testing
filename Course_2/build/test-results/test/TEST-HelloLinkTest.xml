@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HelloLinkTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-02-17T14:56:23" hostname="szoftver-aszucs" time="0.003">
+  <properties/>
+  <testcase name="multiplicationOfZeroIntegereShouldReturnZero" classname="HelloLinkTest" time="0.003"/>
+  <system-out><![CDATA[ Error 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
