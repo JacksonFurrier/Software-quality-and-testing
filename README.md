@@ -12,6 +12,10 @@ the "Software quality and testing" course.
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpeninVisualStudioCode)
 
+### Documentation ###
+* [JUnit4](https://junit.org/junit4/javadoc/latest/)
+* [Mockito](http://site.mockito.org/)
+
 ### Sample environment set-up for  Visual Studio Code and Gradle ###
 
 ### Course 1. Test, introduction ###
