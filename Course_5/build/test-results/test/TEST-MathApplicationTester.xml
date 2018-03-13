@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MathApplicationTester" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-03-13T12:37:10" hostname="szoftver-aszucs" time="0.035">
+<testsuite name="MathApplicationTester" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-03-13T13:44:54" hostname="szoftver-aszucs" time="0.026">
   <properties/>
-  <testcase name="testAdd" classname="MathApplicationTester" time="0.035">
-    <failure message="Wanted but not invoked:&#10;calcService.add(10.0d, 20.0d);&#10;-&gt; at MathApplicationTester.testAdd(MathApplicationTester.java:32)&#10;Actually, there were zero interactions with this mock.&#10;" type="org.mockito.exceptions.verification.WantedButNotInvoked">Wanted but not invoked:
+  <testcase name="testAdd" classname="MathApplicationTester" time="0.026">
+    <failure message="Wanted but not invoked:&#10;calcService.add(10.0d, 20.0d);&#10;-&gt; at MathApplicationTester.testAdd(MathApplicationTester.java:37)&#10;Actually, there were zero interactions with this mock.&#10;" type="org.mockito.exceptions.verification.WantedButNotInvoked">Wanted but not invoked:
 calcService.add(10.0d, 20.0d);
--&gt; at MathApplicationTester.testAdd(MathApplicationTester.java:32)
+-&gt; at MathApplicationTester.testAdd(MathApplicationTester.java:37)
 Actually, there were zero interactions with this mock.
 
-	at MathApplicationTester.testAdd(MathApplicationTester.java:32)
+	at MathApplicationTester.testAdd(MathApplicationTester.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

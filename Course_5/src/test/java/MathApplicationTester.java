@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.mockito.runners.MockitoJUnitRunner;
 
 // @RunWith attaches a runner with the test class to initialize the test data
@@ -19,6 +20,10 @@ public class MathApplicationTester {
    //@Mock annotation is used to create the mock object to be injected
    @Mock
    CalculatorService calcService;
+    //
+    // @Spy
+    // CalculatorService calcService;
+
 
    @Test
    public void testAdd(){
