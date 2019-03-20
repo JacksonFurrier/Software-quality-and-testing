@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Issue tracker</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Issue tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/issues">Issues <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- Further contents goes here -->
+
+    <h2 class="display-2 my-3" th:text=" ${issue.id} == 0 ? 'New issue' : 'Edit issue' ">New issue</h2>
+
+    <form action="" novalidate th:action="${issue.id} == 0 ? @{/issues/new} : @{/issues/{id}/edit(id=${issue.id})}" th:object="${issue}" method="post">
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input th:field="*{title}" type="text" class="form-control" id="title" placeholder="Title" required th:errorclass="is-invalid">
+            <div class="invalid-feedback" th:errors="*{title}">
+                Please provide a title!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea th:field="*{description}" class="form-control" id="description" rows="5" required th:errorclass="is-invalid"></textarea>
+            <div class="invalid-feedback" th:errors="*{description}">
+                Please provide a description!
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="place">Place</label>
+            <input th:field="*{place}" type="text" class="form-control" id="place" placeholder="Place" required th:errorclass="is-invalid">
+            <div class="invalid-feedback" th:errors="*{place}">
+                Please provide a place!
+            </div>
+        </div>
+        <!--   <div class="form-group">
+             <label for="status">Status</label>
+             <select th:field="*{status}" class="form-control" id="status" required>
+                 <option value="NEW">New</option>
+                 <option value="DOING">Doing</option>
+                 <option value="DONE">Done</option>
+             </select>
+             <div class="invalid-feedback">
+                 Please provide a status!
+             </div>
+         </div> -->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
