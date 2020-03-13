@@ -4,6 +4,8 @@ import static org.junit.Assert.assertNotEquals;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 
 import org.junit.*;
 
@@ -32,13 +34,25 @@ public class NetworkConnectionTest{
     {
         mNetworkConnection = mock( NetworkConnection.class );
         when( mNetworkConnection.GetHttpRequest()).thenReturn(" ");
-        assertEquals(" ", mNetworkConnection.GetHttpRequest() );        
+        assertEquals(" ", mNetworkConnection.GetHttpRequest() );
     }
 
     @Test //2nd task    
-    public void HttpRequestReturnsNullWithFakeUrl()
+    public void HttpRequestReturnsNullWithFakeUrl() throws UnsupportedEncodingException, MalformedURLException, IOException
     {
-        // implement me
+        mNetworkConnection = new NetworkConnection();
+        String vURL = "Dummy";
+
+        URL vObjectURL = mock(URL.class);
+        URLConnection vURLConnection = mock(URLConnection.class);
+        
+        String vCharset = "UTF-8";
+        when( vURLConnection.setRequestProperty("Accept-Charset", vCharset ) ).thenReturn();
+        when( vObjectURL.openConnection() ).thenReturn(vURLConnection);
+
+        String result = mNetworkConnection.GetHttpRequestParameterized(vURL, vObjectURL);
+
+        //assertEquals(result, "not valid");
     }
 
     @Test //3rd task
@@ -47,5 +61,10 @@ public class NetworkConnectionTest{
         // implement me
     }
 
+    @Test
+    public void FooTest() throws UnsupportedEncodingException, MalformedURLException, IOException
+    {
+        
+    }
     
 }

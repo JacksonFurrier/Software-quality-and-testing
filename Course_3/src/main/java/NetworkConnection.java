@@ -51,9 +51,17 @@ public class NetworkConnection{
      }
 
      //Task 2nd
-     public String GetHttpRequestParameterized() 
+     public String GetHttpRequestParameterized(String aURL, URL aObjecURL) throws MalformedURLException, IOException
      {
-         return " ";
+        URLConnection vConnection = new URL( aURL + "?" + mQuery).openConnection();
+        vConnection.setRequestProperty("Accept-Charset", mCharset);        
+
+        InputStream vResponse = vConnection.getInputStream( );
+
+        try (Scanner scanner = new Scanner( vResponse )) {
+            String vResponseBody = scanner.useDelimiter("\\A").next();
+            return vResponseBody;
+        }
      }
     
      //Task 3rd
