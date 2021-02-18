@@ -1,3 +1,5 @@
+package course_2;
+
 import java.util.Vector;
 
 public class HelloLink{
