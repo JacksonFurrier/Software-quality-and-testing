@@ -47,7 +47,7 @@ public class NetworkConnectionTest{
         URLConnection vURLConnection = mock(URLConnection.class);
         
         String vCharset = "UTF-8";
-        when( vURLConnection.setRequestProperty("Accept-Charset", vCharset ) ).thenReturn();
+        // when( vURLConnection.setRequestProperty("Accept-Charset", vCharset ) ).thenReturn();
         when( vObjectURL.openConnection() ).thenReturn(vURLConnection);
 
         String result = mNetworkConnection.GetHttpRequestParameterized(vURL, vObjectURL);
